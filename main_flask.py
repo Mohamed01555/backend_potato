@@ -1,4 +1,4 @@
-from flask import Flask, render_template, request
+from flask import Flask, request
 from flask_cors import CORS
 from keras.models import load_model
 from PIL import Image

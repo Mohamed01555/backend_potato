@@ -32,7 +32,7 @@ def read_file_as_image(data) -> np.ndarray:
     image = Image.open(BytesIO(data))
     
     image = image.resize((256,256))
-    print(np.array(image).shape)
+    # print(np.array(image).shape)
     return np.array(image)[:,:,:3]
 
 @app.post("/predict")
@@ -53,3 +53,4 @@ async def predict(
 
 if __name__ == "__main__":
     uvicorn.run(app, host='localhost', port=8000)
+    
